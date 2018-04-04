@@ -1,0 +1,8 @@
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\bin\Debug\contest1.exe
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\bin\Debug\contest1.pdb
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.csprojResolveAssemblyReference.cache
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.Form1.resources
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.Properties.Resources.resources
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.csproj.GenerateResource.Cache
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.exe
+c:\users\julian\documents\visual studio 2010\Projects\contest1\contest1\obj\x86\Debug\contest1.pdb

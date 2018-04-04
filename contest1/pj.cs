@@ -12,6 +12,8 @@ namespace contest1
     {
         public static string simbol = "@";
         public static int x, y;
+        public static string nombre, clase, titulo;
+        public static int level, exp, next, chp, mhp, cmp, mmp, str, agi, vit;
         public static  void readmovement(ConsoleWindow console)
         {
             
@@ -19,7 +21,7 @@ namespace contest1
 
                 if (key.ToString() == "Right" || key.ToString() == "D")
                 {
-                    if ( pj.y < console.Cols-1)
+                    if ( pj.y < console.Cols-35)
                     {
                         console.Write(pj.x, pj.y, " ", Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                         pj.y++;
@@ -37,7 +39,7 @@ namespace contest1
                 }
                 if (key.ToString() == "Down" || key.ToString() == "S")
                 {
-                    if ( pj.x < console.Rows-1)
+                    if ( pj.x < console.Rows-5)
                     {
                         console.Write(pj.x, pj.y, " ", Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                         pj.x++;

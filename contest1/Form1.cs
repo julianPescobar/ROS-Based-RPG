@@ -36,6 +36,12 @@ namespace contest1
             pj.vit = 2;
 
             Enemy kobold = new Enemy();
+            kobold.hp = 5;
+            kobold.simbolo = "K";
+            kobold.x = 15;
+            kobold.y = 15;
+            kobold.str = 1;
+            kobold.agi = 1;
             
             
             //event handlers
@@ -51,7 +57,7 @@ namespace contest1
             while (console.WindowUpdate())
             {
                 Game.update();
-
+                Game.putmonster(kobold);
             }  
                 /* WindowUpdate() does a few very important things:
                 ** It renders the console to the screen;

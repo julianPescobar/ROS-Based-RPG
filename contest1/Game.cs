@@ -20,6 +20,7 @@ namespace contest1
             }
             mouse();
             printdisplay();
+            
         }
         public static void mouse()
         {
@@ -48,7 +49,7 @@ namespace contest1
         }
         public static void putmonster(Enemy enemy)
         {
-           
+            Form1.console.Write(enemy.y, enemy.x, enemy.simbolo, Color4.Red);
         }
     }
 }

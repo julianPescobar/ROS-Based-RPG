@@ -10,7 +10,10 @@ using System.Text;
         public  string simbolo { get; set; }
         public  int x{ get; set; }
         public  int y{ get; set; }
-        public  int hp{ get; set; } public static int exp { get; set; } public static int  str{ get; set; } public static int agi { get; set; }
+        public  int hp{ get; set; } 
+        public  int exp { get; set; } 
+        public  int str{ get; set; } 
+        public  int agi { get; set; }
      
     }
       

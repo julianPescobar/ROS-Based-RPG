@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bestiary.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

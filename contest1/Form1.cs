@@ -22,8 +22,10 @@ namespace contest1
             this.Visible = false;
         }
         public static ConsoleWindow console = new ConsoleWindow(50, 100, "rogue test");
+       
         private void Form1_Load(object sender, EventArgs e)
         {
+            bestiary.start();
             pj.x = 0; pj.y = 0;
             pj.nombre = "Arturito";
             pj.level = 1;
@@ -34,30 +36,34 @@ namespace contest1
             pj.str = 1;
             pj.agi = 2;
             pj.vit = 2;
-
-            Enemy kobold = new Enemy();
-            kobold.hp = 5;
-            kobold.simbolo = "K";
-            kobold.x = 15;
-            kobold.y = 15;
-            kobold.str = 1;
-            kobold.agi = 1;
-            
             
             //event handlers
+            List<Enemy> floor1 = new List<Enemy>();
+            floor1.Add(bestiary.slime);
+            Game.putmonsters(floor1);
           console.Mouse.ButtonDown += new EventHandler<MouseButtonEventArgs>(Mouse_ButtonDown);
             console.Mouse.Move +=new EventHandler<MouseMoveEventArgs>(Mouse_Move);
          
            
             console.Write(pj.x, pj.y, pj.simbol, Color4.White,console.GetBackgroundColor(pj.x,pj.y));
             Random r = new Random();
-            
-          
+
+           
             // Finally, update the window until a key is pressed or the window is closed:
             while (console.WindowUpdate())
             {
+                if (Form1.console.KeyPressed)
+                {
+
+                    pj.readmovement(Form1.console);
+
+                    Game.putmonsters(floor1);
+                    //string escribo = "Coords(x:"+pj.x+",y:"+pj.y+") Color Fondo= " + System.Drawing.ColorTranslator.FromHtml("#" + console.GetBackgroundColor(pj.x, pj.y).ToArgb().ToString("X")).Name + " Color Letra = " + System.Drawing.ColorTranslator.FromHtml("#" + console.GetColor(pj.x, pj.y).ToArgb().ToString("X")).Name+" Letra = '"+ console.GetChar(pj.x,pj.y)+"'";
+                    pj.getcharstatus();
+
+                }
                 Game.update();
-                Game.putmonster(kobold);
+             
             }  
                 /* WindowUpdate() does a few very important things:
                 ** It renders the console to the screen;

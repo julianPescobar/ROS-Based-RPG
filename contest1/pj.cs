@@ -16,12 +16,13 @@ namespace contest1
         public static int level, exp, next, chp, mhp, cmp, mmp, str, agi, vit;
         public static  void readmovement(ConsoleWindow console)
         {
-            
+            if (pj.simbol != "X")
+            {
                 Key key = console.GetKey();
 
                 if (key.ToString() == "Right" || key.ToString() == "D")
                 {
-                    if ( pj.y < console.Cols-35)
+                    if (pj.y < console.Cols - 35)
                     {
                         console.Write(pj.x, pj.y, " ", Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                         pj.y++;
@@ -30,7 +31,7 @@ namespace contest1
                 }
                 if (key.ToString() == "Up" || key.ToString() == "W")
                 {
-                    if (pj.x > 0 )
+                    if (pj.x > 0)
                     {
                         console.Write(pj.x, pj.y, " ", Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                         pj.x--;
@@ -39,7 +40,7 @@ namespace contest1
                 }
                 if (key.ToString() == "Down" || key.ToString() == "S")
                 {
-                    if ( pj.x < console.Rows-5)
+                    if (pj.x < console.Rows - 5)
                     {
                         console.Write(pj.x, pj.y, " ", Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                         pj.x++;
@@ -55,9 +56,16 @@ namespace contest1
                         console.Write(pj.x, pj.y, pj.simbol, Color4.White, console.GetBackgroundColor(pj.x, pj.y));
                     }
                 }
-              
+            }
           
            
         }
-    }
+        public static void getcharstatus()
+        {
+            if (pj.chp <= 0) {
+
+                Environment.Exit(0);
+            }
+        }
+   }
 }
